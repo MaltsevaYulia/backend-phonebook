@@ -1,6 +1,6 @@
-const { Shema, model } = require('mongoose')
+const { Schema, model } = require('mongoose')
 
-const contactsShema = Shema({
+const contactsSchema = Schema({
   name: {
     type: String,
     required: true,
@@ -11,7 +11,7 @@ const contactsShema = Shema({
   },
 }, { versionKey: false });
 
-const Contact = model("contact", contactsShema);
+const Contact = model("contact", contactsSchema);
 
 module.exports = {
   Contact,
